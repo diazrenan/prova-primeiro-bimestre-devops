@@ -6,7 +6,7 @@ variable "project_name" {
 variable "instance_type" {
   description = "Tipo da instância EC2"
   type        = string
-  default     = "t3.micro"
+  default     = "t2.micro"
 }
 
 variable "subnet_id" {

@@ -21,6 +21,7 @@ resource "aws_db_instance" "postgres" {
   vpc_security_group_ids = [var.security_group_id]
   skip_final_snapshot    = true
   publicly_accessible    = false
+  storage_encrypted      = true
 
   tags = {
     Name = "${var.project_name}-db"
