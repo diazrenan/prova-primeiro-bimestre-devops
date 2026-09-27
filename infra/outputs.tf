@@ -32,3 +32,8 @@ output "app_sg_id" {
   description = "ID do security group da aplicação"
   value       = module.security_group.app_security_group_id
 }
+
+output "api_url" {
+  description = "URL de acesso à API de Reservas"
+  value       = "http://${module.ec2.public_ip}:3000"
+}
