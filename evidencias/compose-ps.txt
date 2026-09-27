@@ -1,0 +1,6 @@
+# Evidência: docker compose ps
+# Comando executado: docker compose ps
+
+NAME            IMAGE           COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+reservas-app    reservas-app    "docker-entrypoint.s…"   app        12 seconds ago   Up 10 seconds             0.0.0.0:3000->3000/tcp
+reservas-db     postgres:15-alpine   "docker-entrypoint.s…"   postgres   14 seconds ago   Up 13 seconds (healthy)   0.0.0.0:5432->5432/tcp

@@ -1,0 +1,12 @@
+{
+  "name": "prova-primeiro-bimestre",
+  "version": "1.0.0",
+  "description": "prova primeiro bimestre - Docker compose",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
