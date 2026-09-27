@@ -1,20 +1,61 @@
 # Evidência: docker build
-# Comando executado: docker build -t reservas-app ./app
+# Comando executado: docker build
 
-[+] Building 12.3s (10/10) FINISHED                        docker:default
- => [internal] load build definition from Dockerfile               0.0s
- => => transferring dockerfile: 181B                               0.0s
- => [internal] load .dockerignore                                  0.0s
- => => transferring context: 89B                                   0.0s
- => [internal] load metadata for docker.io/library/node:20-alpine  1.2s
- => [1/5] FROM docker.io/library/node:20-alpine                    0.0s
- => [internal] load build context                                  0.0s
- => => transferring context: 1.23kB                                0.0s
- => [2/5] WORKDIR /app                                             0.1s
- => [3/5] COPY package*.json ./                                    0.0s
- => [4/5] RUN npm install --production                             8.4s
- => [5/5] COPY . .                                                 0.1s
- => exporting to image                                             0.3s
- => => exporting layers                                            0.3s
- => => writing image sha256:a1b2c3d4e5f6...                        0.0s
- => => naming to docker.io/library/reservas-app                    0.0s
+C:\Users\Renan\prova-primeiro-bimestre-devops>docker compose up -d --build
+
+#1 [internal] load local bake definitions
+#1 reading from stdin 593B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 184B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/node:20-alpine
+#3 DONE 5.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 119B 0.0s done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#6 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#6 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.1s done
+#6 DONE 0.1s
+
+#7 [4/5] RUN npm install --production
+#7 CACHED
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [3/5] COPY package*.json ./
+#9 CACHED
+
+#10 [5/5] COPY . .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:cd2e071b0a4484266efbd5d85dbf22e265a08821581a5da1cc717aef2a809176 done
+#11 exporting config sha256:1e29184e3507ff50433962af06fed6b4dfbe3a752b047fa27d637512d5fb3475 done
+#11 exporting attestation manifest sha256:72689732e39d7dd2e41908176c42db7ac34d1a8767c9c1df8fe1242a7756bf92
+#11 exporting attestation manifest sha256:72689732e39d7dd2e41908176c42db7ac34d1a8767c9c1df8fe1242a7756bf92 0.1s done
+#11 exporting manifest list sha256:4af186853656a7315d1833927a15361eafacc65aeb74aca4d2ce788f2cb6201c 0.0s done
+#11 naming to docker.io/library/prova-primeiro-bimestre-devops-app:latest
+#11 naming to docker.io/library/prova-primeiro-bimestre-devops-app:latest done
+#11 unpacking to docker.io/library/prova-primeiro-bimestre-devops-app:latest 0.0s done
+#11 DONE 0.5s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+[+] up 5/5
+ ✔ Image prova-primeiro-bimestre-devops-app            Built                                                                                                       7.7s
+ ✔ Network prova-primeiro-bimestre-devops_reservas_net Created                                                                                                     0.1s
+ ✔ Volume prova-primeiro-bimestre-devops_postgres_data Created                                                                                                     0.0s
+ ✔ Container reservas-db                               Healthy                                                                                                    11.5s
+ ✔ Container reservas-app                              Started
