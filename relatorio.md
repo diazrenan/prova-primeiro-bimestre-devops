@@ -1,4 +1,4 @@
-Questão 1 — A Jornada Completa (Aulas 01 a 07)
+<!-- Questão 1 — A Jornada Completa (Aulas 01 a 07) -->
 Descreva como você conectou as peças do bimestre para entregar a API de Reservas: do versionamento (Git) à infraestrutura na nuvem (Terraform + módulos + remote state). Explique a ordem que seguiu e por quê. Onde cada aula (01 a 07) apareceu na sua solução?
 
 Repostas: Como começei pela parte de docker na prova, então segui com ajuda dos primeiros TF "Aula 01-02" para fazer as configurações e conectar o docker para inicar e ajudar na parte de git, foi com ajuda desses dois arquvios que me auxilio de como começar e testar.
@@ -11,7 +11,7 @@ E a "aula 07" me ajudou a passar specs objetivas para o kiro para ele não gerar
 
 
 
-Questão 2 — O Processo com IA como Copiloto
+<!-- Questão 2 — O Processo com IA como Copiloto -->
 Qual ferramenta de IA você usou e como? Descreva os prompts principais, o que a IA gerou bem e o que precisou corrigir. Se usou Kiro Spec, descreva o fluxo requisitos → design → tarefas. Compare com fazer manualmente: onde a IA economizou tempo e onde atrapalhou?
 
 reposta: Nessa prova eu utilizei duas ferramentas de IA o "Kiro e Gemini" o kiro para criação e modificação das pastas e o gemini como duvidas e sugestão e explicação.
@@ -281,7 +281,7 @@ aws_dynamodb_table.tfstate_lock: Creation complete after 19s [id=prova-devops-tf
 
 
 
-Questão 3 — Infraestrutura, Segurança e o Learner Lab
+<!-- Questão 3 — Infraestrutura, Segurança e o Learner Lab -->
 Explique a arquitetura AWS que você provisionou (pode incluir diagrama). Por que o RDS fica na subnet privada e a EC2 na pública? Como funcionou o uso do LabRole/LabInstanceProfile em vez de criar IAM próprio? Que ajustes o AWS Academy Learner Lab exigiu em relação ao que foi ensinado (credenciais temporárias, região, restrições de IAM)?
 
 Resposta: Para esse projeto, eu montei uma arquitetura clássica de duas camadas (Two-Tier) focada em isolamento de recursos. Tudo foi criado dentro de uma VPC na região us-east-1 (Norte da Virgínia).
@@ -311,7 +311,7 @@ Credenciais temporárias: Numa conta real, a gente usa chaves de acesso fixas no
 
 Região e IAM: Fiquei limitado a usar apenas a região us-east-1 (Norte da Virgínia) e tive que usar os perfis genéricos (LabInstanceProfile) em vez de aplicar o princípio do menor privilégio criando minhas próprias IAM Roles, porque a conta não deixava.
 
-Questão 4 — Validação e Responsabilidade
+<!-- Questão 4 — Validação e Responsabilidade -->
 Que checklist você aplicou antes de rodar terraform apply em código gerado por IA? Como validou que a infraestrutura estava correta e segura? O que aconteceria se você aceitasse o código da IA sem revisar? Como a evolução Git → Docker → Terraform → Modules preparou você para usar IA com responsabilidade?
 
 Resposta:
